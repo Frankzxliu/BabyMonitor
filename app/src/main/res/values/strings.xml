@@ -5,4 +5,11 @@
     <string name="baby_ip_camera">Baby IP Camera</string>
     <string name="sleep_history">Sleep History</string>
     <string name="motion_picture">Motion Picture</string>
+    <string name="phone_number">Phone number</string>
+    <string name="call">Call</string>
+    <string name="text">Text</string>
+    <string name="sensitivity">Sensitivity Level</string>
+    <string name="test_sensitivity">Sensitivity Test</string>
+    <string name="start_monitor">Start Monitor</string>
+
 </resources>

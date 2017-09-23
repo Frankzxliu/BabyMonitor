@@ -57,7 +57,7 @@ public class BabyMonitorListFragment extends Fragment {
         }
         images.recycle();
 
-        selectedListener = new TitleSelectionHelper();
+        selectedListener = new TitleSelectionHelper(context);
     }
 
     @Override

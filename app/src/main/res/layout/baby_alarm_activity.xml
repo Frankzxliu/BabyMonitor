@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/phone_number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:textSize="@dimen/text_size"
+        android:background="@drawable/edit_text_style"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:id="@+id/call_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@id/phone_number"
+        android:layout_alignRight="@id/phone_number"
+        android:layout_below="@id/phone_number"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:text="@string/call"
+            />
+        <RadioButton
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:text="@string/text"
+            />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/firstDivider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/call_text"
+        />
+
+    <TextView
+        android:id="@+id/sensitivity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sensitivity"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@id/firstDivider"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/sensitivity_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/sensitivity_seekbar"
+        android:layout_toLeftOf="@+id/sensitivity_seekbar"
+        android:layout_toStartOf="@+id/sensitivity_seekbar" />
+
+    <SeekBar
+        android:id="@+id/sensitivity_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/custom_seekbar_layout"
+        android:thumb="@drawable/red_scrubber_control"
+        android:layout_below="@id/sensitivity_label"
+        android:layout_alignLeft="@id/sensitivity_label"
+        android:layout_alignStart="@id/sensitivity_label"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="50"
+        android:layout_alignRight="@id/sensitivity_label"
+        android:layout_alignEnd="@id/sensitivity_label" />
+
+    <View
+        android:id="@+id/secondDivider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/sensitivity_seekbar"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/sensitivity_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_sensitivity"
+        android:layout_below="@id/secondDivider"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/start_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_monitor"
+        android:layout_below="@+id/secondDivider"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
