@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">BabyMonitor</string>
     <string name="action_settings">Settings</string>
+    <string name="baby_alarm">Baby Alarm</string>
+    <string name="baby_ip_camera">Baby IP Camera</string>
+    <string name="sleep_history">Sleep History</string>
+    <string name="motion_picture">Motion Picture</string>
 </resources>

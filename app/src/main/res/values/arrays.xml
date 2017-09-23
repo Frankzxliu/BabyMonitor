@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="names">
+        <item>@string/baby_alarm</item>
+        <item>@string/baby_ip_camera</item>
+        <item>@string/sleep_history</item>
+        <item>@string/motion_picture</item>
+    </array>
+
+    <integer-array name="images">
+        <item>@drawable/baby_alarm</item>
+        <item>@drawable/baby_ip_camera</item>
+        <item>@drawable/sleep_history</item>
+        <item>@drawable/motion_picture</item>
+    </integer-array>
+</resources>
