@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.frank.babymonitor">
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".babyalarm.BabyAlarmActivity"/>
-    </application>
 
+        <service android:name=".babyalarm.MonitorService" />
+
+    </application>
 </manifest>
