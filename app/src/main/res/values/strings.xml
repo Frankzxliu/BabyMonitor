@@ -13,5 +13,6 @@
     <string name="start_monitor">Start Monitor</string>
     <string name="not_monitor">Not Monitor</string>
     <string name="monitoring">Monitoring</string>
+    <string name="baby_up">Your baby woke up!</string>
 
 </resources>

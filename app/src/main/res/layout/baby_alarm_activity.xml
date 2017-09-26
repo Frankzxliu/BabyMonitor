@@ -51,6 +51,7 @@
             android:id="@+id/textMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:textSize="@dimen/text_size"
             android:text="@string/text"
             />

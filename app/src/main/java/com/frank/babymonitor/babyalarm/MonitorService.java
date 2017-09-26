@@ -31,6 +31,8 @@ public class MonitorService extends Service{
     private double sensitivityLimit = 3.5;
     private int currentVolumeLimit = 40;
     private boolean recording;
+    protected static double sensitivityTextView = 35;
+    protected static String number = null;
 
     @Nullable
     @Override
@@ -50,6 +52,9 @@ public class MonitorService extends Service{
             running = true;
 
             sensitivityLimit = intent.getDoubleExtra("sensitivity", 25);
+            number = intent.getStringExtra("number");
+
+            sensitivityTextView = sensitivityLimit;
 
             sensitivityLimit = (sensitivityLimit + 10) / 10;
 
