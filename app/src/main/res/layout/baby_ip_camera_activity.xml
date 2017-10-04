@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+    <Button
+        android:id="@+id/use_as_baby_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/use_as_baby_device"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dip" />
+
+    <Button
+        android:id="@+id/use_as_parent_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/use_as_parent_device"
+        android:textSize="@dimen/text_size" />
+</LinearLayout>

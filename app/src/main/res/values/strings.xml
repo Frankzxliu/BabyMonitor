@@ -14,5 +14,9 @@
     <string name="not_monitor">Not Monitor</string>
     <string name="monitoring">Monitoring</string>
     <string name="baby_up">Your baby woke up!</string>
-
+    <string name="parent_title">Parent Device</string>
+    <string name="search_baby_device">Search Baby Device</string>
+    <string name="select_a_device">Select A Device</string>
+    <string name="use_as_baby_device">Use As Baby Device</string>
+    <string name="use_as_parent_device">Use As Parent Device</string>
 </resources>

@@ -7,6 +7,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-permission android:required="true" android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -25,6 +31,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".babyalarm.BabyAlarmActivity"/>
+        <activity android:name=".babyipcamera.BabyIpCameraActivity"/>
+        <activity android:name=".babyipcamera.ParentDeviceActivity"/>
+        <activity android:name=".babyipcamera.BabyDeviceActivity"/>
+        <activity android:name=".babyipcamera.ParentViewActivity"/>
 
         <service android:name=".babyalarm.MonitorService" />
 

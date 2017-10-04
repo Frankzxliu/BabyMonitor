@@ -106,24 +106,14 @@ public class BabyAlarmActivity extends AppCompatActivity {
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "test is clicked");
-                displayMonitorTextView.setText(R.string.monitoring);
-                Intent intent = new Intent(getBaseContext(), MonitorService.class);
-                intent.putExtra("sensitivity",Double.parseDouble(sensitivityLevelTextView.getText().toString()));
-                intent.putExtra("number",phoneNumEditText.getText().toString());
-                startService(intent);
+                buttonClicked();
             }
         });
 
         monitorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "monitor is clicked");
-                displayMonitorTextView.setText(R.string.monitoring);
-                Intent intent = new Intent(getBaseContext(), MonitorService.class);
-                intent.putExtra("sensitivity",Double.parseDouble(sensitivityLevelTextView.getText().toString()));
-                intent.putExtra("number",phoneNumEditText.getText().toString());
-                startService(intent);
+                buttonClicked();
             }
         });
 
@@ -169,6 +159,20 @@ public class BabyAlarmActivity extends AppCompatActivity {
         outState.putString(DISPALY_MONITOR,displayMonitorTextView.getText().toString());
 
         super.onSaveInstanceState(outState);
+    }
+
+    private void buttonClicked(){
+        if(!phoneNumEditText.getText().toString().isEmpty()) {
+            Log.d(TAG, "test is clicked");
+            displayMonitorTextView.setText(R.string.monitoring);
+            Intent intent = new Intent(getBaseContext(), MonitorService.class);
+            intent.putExtra("sensitivity", Double.parseDouble(sensitivityLevelTextView.getText().toString()));
+            intent.putExtra("number", phoneNumEditText.getText().toString());
+            startService(intent);
+        }
+        else{
+            Toast.makeText(this,"Phone number cannot leave blank", Toast.LENGTH_LONG);
+        }
     }
 
     private void makeCall(){

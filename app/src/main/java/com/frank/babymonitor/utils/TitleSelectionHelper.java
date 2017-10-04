@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.frank.babymonitor.BabyMonitorListFragment;
 import com.frank.babymonitor.babyalarm.BabyAlarmActivity;
 import com.frank.babymonitor.babyalarm.MonitorService;
+import com.frank.babymonitor.babyipcamera.BabyIpCameraActivity;
 
 /**
  * Help to bring up correct activity
@@ -32,7 +33,7 @@ public class TitleSelectionHelper implements BabyMonitorListFragment.OnTitleSele
                 break;
             case 1:
                 Log.d(TAG, "2 selected");
-                Toast.makeText(context,"Coming soon",Toast.LENGTH_LONG).show();
+                context.startActivity(new Intent(context, BabyIpCameraActivity.class));
                 break;
             case 2:
                 Log.d(TAG, "3 selected");
